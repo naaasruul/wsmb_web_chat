@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        @if(Auth())
+        @if(Auth()->user())
             @include('layouts.loggedin-header')
         @else
             @include('layouts.header')

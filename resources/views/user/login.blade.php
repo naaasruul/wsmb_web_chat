@@ -6,9 +6,8 @@
 <div
     class="alert alert-success"
     role="alert">
-<ul>
-    <li>{{session('status')}}</li>
-</ul>
+
+    {{session('status')}}
 </div>
 @endif
 

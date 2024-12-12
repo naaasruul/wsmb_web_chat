@@ -116,4 +116,17 @@ class UserController extends Controller
         };
         return back()->withErrors(['login' => 'There\'s error. try again']);
     }
+
+    public function logoutUser(Request $request){
+        $user = Auth::user();
+        $user->online = false;
+
+        $user->save();
+
+        $request->session()->regenerate();
+        $request->session()->invalidate();
+
+        return redirect()->route('login')->with('status' , 'Dah logout');
+
+    }
 }
