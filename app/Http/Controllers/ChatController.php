@@ -13,7 +13,7 @@ class ChatController extends Controller
     {
         //
 
-        return view('chat');
+        return view('chat.chat');
     }
 
     /**

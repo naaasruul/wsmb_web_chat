@@ -10,14 +10,18 @@
 
 <body>
     <header>
-        @include('layouts.header')
+        @if(Auth()->user())
+            @include('layouts.loggedin-header')
+        @else
+            @include('layouts.header')
+        @endif
     </header>
     <main class="py-5 bg-light">
-    <section class="container">
-        @yield('section')
-    </section>
+        <section class="container">
+            @yield('section')
+        </section>
     </main>
-    
+
     <footer class="p-5 my-5 bg-dark text-center text-light">
         <p>&copy; 2024 Nasrul</p>
     </footer>
