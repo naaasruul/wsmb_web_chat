@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->string('password');
             $table->string('avatar_url');
-            $table->boolean('online');
+            $table->boolean('online')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

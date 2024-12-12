@@ -8,7 +8,11 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [RegisterController::class,'login'])->name('login');
 Route::get('/register', [RegisterController::class,'register'])->name('register');
+Route::post('/register-user', [UserController::class,'registerUser'])->name('register-user');
+
+Route::post('/login-user', [UserController::class,'loginUser'])->name('login-user');
+
 Route::get('/profile', [RegisterController::class,'profile'])->name('profile');
 
-Route::get('/chat', [ChatController::class,'profile'])->name('chat');
+Route::get('/chat', [ChatController::class,'index'])->name('chat');
 

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->tinyInteger('type');
             $table->text('content')->nullable();
-            $table->integer('gallery_id')->nullable();
+            $table->integer('photo_id')->nullable();
             $table->integer('user_id');
             $table->timestamps();
         });
